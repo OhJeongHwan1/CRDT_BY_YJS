@@ -12,7 +12,9 @@ function App() {
 
     const doc = new Y.Doc();
 
-    const provider = new WebrtcProvider("test-room", doc, {});
+    const provider = new WebrtcProvider("test-room", doc, {
+      signaling: ["wss://signaling.yjs.dev"],
+    });
     const type = doc.getText("monaco");
 
     const binding = new MonacoBinding(
