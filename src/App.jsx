@@ -12,23 +12,7 @@ function App() {
 
     const doc = new Y.Doc();
 
-    const provider = new WebrtcProvider("test-room", doc, {
-      signaling: ["ws://192.168.203.193:4002"], // 기본 시그널링 서버
-      // 사용자 정의 STUN/TURN 서버 설정
-      peerOpts: {
-        config: {
-          iceServers: [
-            { urls: "stun:stun.l.google.com:19302" }, // Google STUN 서버
-            // TURN 서버 설정 필요 시 추가
-            // {
-            //   urls: "turn:your.turn.server:3478",
-            //   username: "your-username",
-            //   credential: "your-password"
-            // }
-          ],
-        },
-      },
-    });
+    const provider = new WebrtcProvider("test-room", doc, {});
     const type = doc.getText("monaco");
 
     const binding = new MonacoBinding(
