@@ -13,7 +13,7 @@ function App() {
     const doc = new Y.Doc();
 
     const provider = new WebrtcProvider("test-room", doc, {
-      signaling: ["wss://192.168.203.193:4444"],
+      signaling: ["wss://192.168.203.193:1234"],
     });
     const type = doc.getText("monaco");
 
